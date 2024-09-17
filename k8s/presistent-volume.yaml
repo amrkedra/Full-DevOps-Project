@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mypv
+spec:
+  capacity:
+    storage: 6Gi
+  accessModes:
+  - ReadWriteOnce
+  - ReadWriteMany
+  storageClassName: slow
+  volumeMode: Filesystem
+  hostPath:
+    path: /home/vol
+  persistentVolumeReclaimPolicy: Recycle

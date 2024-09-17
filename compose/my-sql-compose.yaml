@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  my-sql:
+    image: mysql:lts-oracle
+    env_file:
+    - ./vars.env
+    volumes:
+    - mysql-data:/var/lib/mysql
+    ports:
+    - "3306:3306"
+    networks:
+    - nginx-proxy
+
+networks:
+  nginx-proxy:
+    driver: bridge
+
+volumes:
+  mysql-data:

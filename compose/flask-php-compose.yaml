@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  flask:
+    image: amrkedra/flask-app:v1
+    # ports:
+    # - "5000:5000"
+    env_file:
+    - ./flask-vars.env
+
+    networks:
+    - nginx-proxy
+
+  my-php-admin:
+    image: phpmyadmin:latest
+    env_file:
+    - ./php-vars.env
+    # ports:
+    # - "8086:80"
+
+    networks:
+    - nginx-proxy
+
+networks:
+  nginx-proxy:
+    driver: bridge

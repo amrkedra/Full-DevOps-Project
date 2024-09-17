@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  flask:
+    image: amrkedra/flask-app:v1
+    ports:
+      - "8000:5000"
+    env_file:
+      - ./vars.env
+    depends_on:
+      - my-sql
+    networks:
+      - nginx-proxy
+
+
+
+  my-php-admin:
+    image: phpmyadmin:latest
+    env_file:
+      - ./vars.env
+    ports:
+      - "8086:80"
+    depends_on:
+      - my-sql
+    networks:
+      - nginx-proxy
+
+
+
