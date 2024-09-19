@@ -1,13 +1,15 @@
 #!/bin/bash
 
+# Update package list
+sudo apt update
 
-sudo apt-get update
-
-
+# Check if Docker Compose is installed
 if ! command -v docker-compose &> /dev/null; then
-    sudo apt-get install -y docker-compose
+    echo "Docker Compose not found, installing..."
+    sudo apt install -y docker-compose
+else
+    echo "Docker Compose is already installed."
 fi
 
-sudo apt-get update
-sudo apt-get install -y python3-distutils
-
+# Verify Docker Compose installation
+docker-compose --version
