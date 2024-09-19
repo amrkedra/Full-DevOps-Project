@@ -9,7 +9,7 @@ services:
     volumes:
     - /var/run/docker.sock:/tmp/docker.sock:ro
     # - /home/amr-kedra/Full-DevOps-Project/compose/nginx.conf/nginx.conf:/etc/nginx/nginx.conf
-    - /home/amr-kedra/Full-DevOps-Project/compose/certs:/etc/nginx/certs:ro
+    - /home/amrkedra/Full-DevOps-Project/compose/certs:/etc/nginx/certs:ro
     networks:
     - nginx-proxy
 
