@@ -8,7 +8,7 @@ services:
     - "443:443" # Optional: For HTTPS
     volumes:
     - /var/run/docker.sock:/tmp/docker.sock:ro
-    - /home/amr-kedra/Full-DevOps-Project/compose/certs:/etc/nginx/certs:ro # For SSL certs if you're using them
+    - /home/amrkedra/Full-DevOps-Project/compose/certs:/etc/nginx/certs:ro # For SSL certs if you're using them
     networks:
     - nginx-proxy
 
