@@ -1,6 +1,6 @@
-*.crt
-*.key
+# *.crt
+# *.key
 configmap.*
 secret.*
-certs/*
-certs/
+# certs/*
+# certs/
