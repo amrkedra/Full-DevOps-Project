@@ -8,21 +8,9 @@ services:
     - "443:443" # Optional: For HTTPS
     volumes:
     - /var/run/docker.sock:/tmp/docker.sock:ro
-    - ~/nginx.conf:/etc/nginx/nginx.conf
-    - ~/Full-DevOps-Project/compose/certs:/etc/nginx/certs:ro
+    - /home/amr-kedra/Full-DevOps-Project/compose/certs:/etc/nginx/certs:ro # For SSL certs if you're using them
     networks:
     - nginx-proxy
-
-  # nginx-proxy-manager:
-  #   image: jc21/nginx-proxy-manager:latest
-  #   ports:
-  #   - "81:81" # Web interface
-  #   - "443:443" # Optional: For HTTPS
-  #   volumes:
-  #   - ./data:/data
-  #   - ./letsencrypt:/etc/letsencrypt
-  #   networks:
-  #   - nginx-proxy
 
 networks:
   nginx-proxy:
