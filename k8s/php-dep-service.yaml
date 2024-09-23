@@ -71,11 +71,11 @@ metadata:
 spec:
   selector:
     app: php-app
-  type: NodePort
+  type: ClusterIP
 
   ports:
   - name: php-app
     protocol: TCP
     port: 8050
     targetPort: 80
-    nodePort: 30006
+
