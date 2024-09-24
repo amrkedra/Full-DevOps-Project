@@ -4,10 +4,10 @@ metadata:
   name: ingress-flask
   namespace: default
   annotations:
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
     nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    kubernetes.io/ingress.class: nginx
 spec:
-  ingressClassName: ingress-nginx
   rules:
   - host: flask.app
     http:

@@ -6,8 +6,8 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    kubernetes.io/ingress.class: nginx
 spec:
-  ingressClassName: ingress-nginx # Specify the nginx ingress class here
   tls:
   - hosts:
     - php.app
