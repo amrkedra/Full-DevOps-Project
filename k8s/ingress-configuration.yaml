@@ -301,12 +301,12 @@ spec:
   - IPv4
   ports:
   - name: http
-    port: 8020
+    port: 80
     protocol: TCP
     targetPort: http
     appProtocol: http
   - name: https
-    port: 441
+    port: 443
     protocol: TCP
     targetPort: https
     appProtocol: https
