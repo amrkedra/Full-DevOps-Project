@@ -52,7 +52,7 @@ metadata:
 spec:
   selector:
     app: flask-app
-  type: NodePort
+  type: cl
   ports:
   - name: flask-service-port
     protocol: TCP
