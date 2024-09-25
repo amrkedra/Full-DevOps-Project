@@ -52,10 +52,9 @@ metadata:
 spec:
   selector:
     app: flask-app
-  type: cl
+  type: ClusterIP
   ports:
-  - name: flask-service-port
-    protocol: TCP
+  - name: flask-service
     port: 5000
     targetPort: 5000
-    nodePort: 30005
+

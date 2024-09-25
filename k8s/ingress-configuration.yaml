@@ -295,20 +295,20 @@ metadata:
   name: my-ingress-nginx-controller
   namespace: ingress-nginx
 spec:
-  type: LoadBalancer
+  type: NodePort
   ipFamilyPolicy: SingleStack
   ipFamilies:
   - IPv4
   ports:
   - name: http
-    port: 80
+    port: 8020
     protocol: TCP
-    targetPort: http
+    targetPort: 80
     appProtocol: http
   - name: https
-    port: 443
+    port: 444
     protocol: TCP
-    targetPort: https
+    targetPort: 443
     appProtocol: https
   selector:
     app.kubernetes.io/name: ingress-nginx
