@@ -301,14 +301,14 @@ spec:
   - IPv4
   ports:
   - name: http
-    port: 8020
+    port: 80
     protocol: TCP
-    targetPort: 80
+    targetPort: http
     appProtocol: http
   - name: https
-    port: 444
+    port: 443
     protocol: TCP
-    targetPort: 443
+    targetPort: https
     appProtocol: https
   selector:
     app.kubernetes.io/name: ingress-nginx
